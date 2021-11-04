@@ -62,7 +62,7 @@ function Banner() {
       {/* three boxes */}
 
       <Container maxW="container.xl" mt={10}>
-        <Grid templateColumns="repeat(3,1fr)">
+        <Grid templateColumns="repeat(3,1fr)" gap={6}>
           <Box>
             <Image
               w="100%"
