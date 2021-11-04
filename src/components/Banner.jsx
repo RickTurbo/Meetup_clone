@@ -1,13 +1,13 @@
 import React from "react";
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
-import { Box, Container, Grid, Heading } from "@chakra-ui/layout";
+import { Badge, Box, Container, Grid, Heading } from "@chakra-ui/layout";
 
 import brandLogo from "../assets/brand-logo.svg";
 import illustration from "../assets/illustration.svg";
-// import imageOne from '../assets/image-one.jpg';
-// import imageTwo from '../assets/image-two.jpg';
-// import imageThree from '../assets/image-three.jpg';
+import imageOne from "../assets/image-one.jpeg";
+import imageTwo from "../assets/image-two.jpeg";
+import imageThree from "../assets/image-three.jpeg";
 // import rightArrow from '../assets/right-arrow.svg';
 
 function Banner() {
@@ -57,12 +57,148 @@ function Banner() {
       </Box>
       {/* three boxes */}
 
-      <Container maxW='container.xl' mt={10}>
-      <Grid templateColumns='repeat(3,1fr)'>
-        <Box></Box>
-        <Box></Box>
-        <Box></Box>
-      </Grid>
+      <Container maxW="container.xl" mt={10}>
+        <Grid templateColumns="repeat(3,1fr)">
+          <Box>
+            <Image
+              w="100%"
+              borderRadius="lg"
+              src={imageOne}
+              alt="image three"
+            />
+            <Button colorScheme="teal" variant="link" mt="5">
+              新しい友だちを作ろう
+            </Button>
+          </Box>
+          <Box>
+            <Image
+              w="100%"
+              borderRadius="lg"
+              src={imageTwo}
+              alt="image three"
+            />
+            <Button colorScheme="teal" variant="link" mt="5">
+              アウトドアを極める
+            </Button>
+          </Box>
+          <Box>
+            <Image
+              w="100%"
+              borderRadius="lg"
+              src={imageThree}
+              alt="image three"
+            />
+            <Button colorScheme="teal" variant="link" mt="5">
+              テクノロジーの力でつながる
+            </Button>
+          </Box>
+        </Grid>
+      </Container>
+
+      {/* pills */}
+      <Container maxW="container.xl">
+        <Box
+          direction="row"
+          display="flex"
+          flexWrap="wrap"
+          justifyContent="space-between"
+          my="10"
+        >
+          <Badge
+            borderRadius="3xl"
+            px={4}
+            py={2}
+            mr={4}
+            mb={4}
+            textTransform="normal"
+            color="#ffffff"
+            bg="blue.100"
+          >
+            キャリアアップ
+          </Badge>
+          <Badge
+            borderRadius="3xl"
+            px={4}
+            py={2}
+            mr={4}
+            mb={4}
+            textTransform="normal"
+            color="#ffffff"
+            bg="blue.100"
+          >
+            禅の心を探す
+          </Badge>
+          <Badge
+            borderRadius="3xl"
+            px={4}
+            py={2}
+            mr={4}
+            mb={4}
+            textTransform="normal"
+            color="#ffffff"
+            bg="blue.100"
+          >
+            行動に移す
+          </Badge>
+          <Badge
+            borderRadius="3xl"
+            px={4}
+            py={2}
+            mr={4}
+            mb={4}
+            textTransform="normal"
+            color="#ffffff"
+            bg="blue.100"
+          >
+            言語と文化をシェアする
+          </Badge>
+          <Badge
+            borderRadius="3xl"
+            px={4}
+            py={2}
+            mr={4}
+            mb={4}
+            textTransform="normal"
+            color="#ffffff"
+            bg="blue.100"
+          >
+            仲間と読書
+          </Badge>
+          <Badge
+            borderRadius="3xl"
+            px={4}
+            py={2}
+            mr={4}
+            mb={4}
+            textTransform="normal"
+            color="#ffffff"
+            bg="blue.100"
+          >
+            仲間とライティング
+          </Badge>
+          <Badge
+            borderRadius="3xl"
+            px={4}
+            py={2}
+            mr={4}
+            mb={4}
+            textTransform="normal"
+            color="#ffffff"
+            bg="blue.100"
+          >
+            技術を磨く
+          </Badge>
+        </Box>
+      </Container>
+
+      {/* last header section */}
+      <Container maxW="container.xl" mt="20">
+        <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+          <Box>
+            <Heading as="h3" size="lg" mb="7"></Heading>
+            <Box></Box>
+          </Box>
+        </Grid>
       </Container>
     </>
   );
