@@ -2,12 +2,16 @@ import React from "react";
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
 import { Badge, Box, Container, Grid, Heading } from "@chakra-ui/layout";
+import { IconButton } from "@chakra-ui/react";
 
 import brandLogo from "../assets/brand-logo.svg";
 import illustration from "../assets/illustration.svg";
 import imageOne from "../assets/image-one.jpeg";
 import imageTwo from "../assets/image-two.jpeg";
 import imageThree from "../assets/image-three.jpeg";
+import { FormControl } from "@chakra-ui/form-control";
+import { Input } from "@chakra-ui/input";
+import { FaSistrix } from "react-icons/fa";
 // import rightArrow from '../assets/right-arrow.svg';
 
 function Banner() {
@@ -195,8 +199,176 @@ function Banner() {
       <Container maxW="container.xl" mt="20">
         <Grid templateColumns="repeat(2, 1fr)" gap={6}>
           <Box>
-            <Heading as="h3" size="lg" mb="7"></Heading>
-            <Box></Box>
+            <Heading as="h3" size="lg" mb="7">
+              どんなことをしてみたいですか？
+            </Heading>
+            <Box d="flex" alignItems="center" flexDirection="row" w="100%">
+              <Box flexBasis="50%" w="100%" mr="2">
+                <FormControl>
+                  <Box pos="relative">
+                    <Input
+                      pl={8}
+                      placeholder="「テニス」を検索する"
+                      type="text"
+                      w="100%"
+                    ></Input>
+                    <Box pos="absolute" top="3" left="2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 20 20"
+                        fill="#d9d9d9"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </Box>
+                  </Box>
+                </FormControl>
+              </Box>
+              <Box flexBasis="50%" ml="2">
+                <FormControl id="email">
+                  <Box pos="relative">
+                    <Input pl={"8"} placeholder="会場" type="text" />
+                    <Box pos="absolute" top="3" left="2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 20 20"
+                        fill="#d9d9d9"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </Box>
+                  </Box>
+                </FormControl>
+              </Box>
+            </Box>
+            <Button
+              _hover={{ opacity: "0.8" }}
+              mt="5"
+              pt="6"
+              pb="6"
+              w="100%"
+              color="#ffffff"
+              bg="red.500"
+              fontSize="lg"
+            >
+              <Box fontWeight="black">検索</Box>
+            </Button>
+          </Box>
+          <Box>
+            <Box>
+              <Heading
+                as="h3"
+                size="lg"
+                mb="7"
+                display={{
+                  sm: "none",
+                  md: "block",
+                  lg: "block",
+                  xl: "block",
+                  base: "none",
+                }}
+              >
+                新しい情報をチェックする
+              </Heading>
+              <Box display="flex" flexWrap="wrap" justifyContent="flex-start">
+                <Badge
+                  borderRadius="3xl"
+                  px={5}
+                  py={2}
+                  mr="4"
+                  mb="4"
+                  color="#ffffff"
+                  textTransform="normal"
+                  bg="blue.100"
+                >
+                  まもなく開催
+                </Badge>
+                <Badge
+                  borderRadius="3xl"
+                  px={5}
+                  py={2}
+                  mr="4"
+                  mb="4"
+                  color="#ffffff"
+                  textTransform="normal"
+                  bg="blue.100"
+                >
+                  今日
+                </Badge>
+                <Badge
+                  borderRadius="3xl"
+                  px={5}
+                  py={2}
+                  mr="4"
+                  mb="4"
+                  color="#ffffff"
+                  textTransform="normal"
+                  bg="blue.100"
+                >
+                  明日
+                </Badge>
+                <Badge
+                  borderRadius="3xl"
+                  px={5}
+                  py={2}
+                  mr="4"
+                  mb="4"
+                  color="#ffffff"
+                  textTransform="normal"
+                  bg="blue.100"
+                >
+                  今週
+                </Badge>
+                <Badge
+                  borderRadius="3xl"
+                  px={5}
+                  py={2}
+                  mr="4"
+                  mb="4"
+                  color="#ffffff"
+                  textTransform="normal"
+                  bg="blue.100"
+                >
+                  オンライン
+                </Badge>
+                <Badge
+                  borderRadius="3xl"
+                  px={5}
+                  py={2}
+                  mr="4"
+                  mb="4"
+                  color="#ffffff"
+                  textTransform="normal"
+                  bg="blue.100"
+                >
+                  対面
+                </Badge>
+                <Badge
+                  borderRadius="3xl"
+                  px={5}
+                  py={2}
+                  mr="4"
+                  mb="4"
+                  color="#ffffff"
+                  textTransform="normal"
+                  bg="blue.100"
+                >
+                  お近くで人気
+                </Badge>
+              </Box>
+            </Box>
           </Box>
         </Grid>
       </Container>
