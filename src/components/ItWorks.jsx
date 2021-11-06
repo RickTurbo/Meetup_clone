@@ -18,7 +18,16 @@ function ItWorks() {
           オンラインおよび対面のイベントを通じて、興味/トピックの合う友人を見つけましょう。アカウントは無料で作成できます。
         </Box>
 
-        <Grid templateColumns="repeat(3, 1fr)" gap="6">
+        <Grid
+          templateColumns={{
+            sm: "repeat(1, 1fr)",
+            md: "repeat(3, 1fr)",
+            lg: "repeat(3, 1fr)",
+            xl: "repeat(3, 1fr)",
+            base: "repeat(1, 1fr)",
+          }}
+          gap="6"
+        >
           <Box mx="auto" align="center">
             <Image w="100%" boxSize="160px" src={joinGroup} alt="brand" />
             <Heading as="h5" size="md">

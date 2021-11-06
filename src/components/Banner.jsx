@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "@chakra-ui/button";
 import { Image } from "@chakra-ui/image";
 import { Badge, Box, Container, Grid, Heading } from "@chakra-ui/layout";
-import { IconButton } from "@chakra-ui/react";
 
 import brandLogo from "../assets/brand-logo.svg";
 import illustration from "../assets/illustration.svg";
@@ -11,7 +10,7 @@ import imageTwo from "../assets/image-two.jpeg";
 import imageThree from "../assets/image-three.jpeg";
 import { FormControl } from "@chakra-ui/form-control";
 import { Input } from "@chakra-ui/input";
-import { FaSistrix } from "react-icons/fa";
+
 // import rightArrow from '../assets/right-arrow.svg';
 
 function Banner() {
@@ -42,7 +41,18 @@ function Banner() {
       <Box>
         {/* main punch text */}
         <Container maxW="container.xl">
-          <Box d="flex" alignItems="center" py="20" flexDirection="row">
+          <Box
+            d="flex"
+            alignItems="center"
+            py="20"
+            flexDirection={{
+              sm: "column",
+              md: "row",
+              lg: "row",
+              xl: "row",
+              base: "column",
+            }}
+          >
             <Box>
               <Heading>
                 <Box>
@@ -62,7 +72,16 @@ function Banner() {
       {/* three boxes */}
 
       <Container maxW="container.xl" mt={10}>
-        <Grid templateColumns="repeat(3,1fr)" gap={6}>
+        <Grid
+          templateColumns={{
+            sm: "repeat(1, 1fr)",
+            md: "repeat(3,1fr)",
+            lg: "repeat(3,1fr)",
+            xl: "repeat(3,1fr)",
+            base: "repeat(1,1fr)",
+          }}
+          gap={6}
+        >
           <Box>
             <Image
               w="100%"
@@ -197,13 +216,49 @@ function Banner() {
 
       {/* last header section */}
       <Container maxW="container.xl" mt="20">
-        <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+        <Grid
+          templateColumns={{
+            sm: "repeat(1, 1fr)",
+            md: "repeat(2, 1fr)",
+            lg: "repeat(2, 1fr)",
+            xl: "repeat(2, 1fr)",
+            base: "repeat(1, 1fr)",
+          }}
+          gap={6}
+        >
           <Box>
             <Heading as="h3" size="lg" mb="7">
               どんなことをしてみたいですか？
             </Heading>
-            <Box d="flex" alignItems="center" flexDirection="row" w="100%">
-              <Box flexBasis="50%" w="100%" mr="2">
+            <Box
+              d="flex"
+              alignItems="center"
+              flexDirection={{
+                sm: "column",
+                md: "row",
+                lg: "row",
+                xl: "row",
+                base: "column",
+              }}
+              w="100%"
+            >
+              <Box
+                flexBasis={{
+                  sm: "100%",
+                  md: "50%",
+                  lg: "50%",
+                  xl: "50%",
+                  base: "100%",
+                }}
+                w="100%"
+                mr={{
+                  sm: "0",
+                  md: "2",
+                  lg: "2",
+                  xl: "2",
+                  base: "0",
+                }}
+              >
                 <FormControl>
                   <Box pos="relative">
                     <Input

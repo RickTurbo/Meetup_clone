@@ -19,7 +19,13 @@ function Connected() {
           justifyContent="space-between"
           alignItems="center"
         >
-          <Box display="block">
+          <Box display={{
+            sm: "none",
+            md: "block",
+            lg: "block",
+            xl: "block",
+            base: "none",
+          }}>
             <Image w="260px" src={deviceLeft}></Image>
           </Box>
 
@@ -33,7 +39,13 @@ function Connected() {
               <Image w="180px" p="5" src={iosPastored}></Image>
             </Box>  */}
           </Box>
-          <Box d='block'>
+          <Box display={{
+            sm: "none",
+            md: "block",
+            lg: "block",
+            xl: "block",
+            base: "none",
+          }}>
             <Image w="260px" right="0" src={deviceRight}></Image>
           </Box>
         </Box>
